@@ -26,7 +26,17 @@
             {{ form.lname(size=64) }}<br>
             {% for error in form.lname.errors %}
             <span style="color: red;">[{{ error }}]</span>
+             Role: {{current_user.role}} <br>
             {% endfor %}
+        </p>
+        <p>
+                {{ form.role.label }}<br>
+                {{ form.role() }}<br>
+                {% for error in form.role.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+    
         </p>
         <p>
             {{ form.image.label }}<br>

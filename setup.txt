@@ -24,7 +24,7 @@ already open then go to the Terminal menu and choose "New Terminal". Check in th
 if the terminal is set to "powershell". If it is, pull down the 
 terminal menu which is a little down pointing arrow next to the '+' at the top right of the 
 terminal window in VSC. Choose "select default profile" then pick "Command Prompt".
-Then click the trash can next to any open termnal listed at the far right in the terminal 
+Then click the trash can next to any open terminal listed at the far right in the terminal 
 window pane. Then open a new terminal by going to the Terminal menu at the top of the screen.
 
 (Mac users, your default profile should be 'zsh'.)
@@ -101,9 +101,9 @@ The next is mongodb.com where you will create your database and all the data fro
 4) Click the connect button and then add 0.0.0.0 as the whitelist IP. There is a 'connect from anywhere' option. This will make it possible to administer your 
     database from anywhere.  
 5) Add new database user admin and password.  This password will be viewable by a lot of people 
-    in class so don't use one that you already use for other important things.  
+    in sclass so don't use one that you already use for other important things.  
     Something simple like Admin and BullDogz.
-6) Click "Add your own data" to create a new data base and a new collection.
+6) Click 'Collections' then "Add your own data" to create a new data base and a new collection.
     Call the database 'capstone' and call the collection 'user'.
 7) Now you need to choose a connection method.  Click "Connect Your Application" and then configure the screen to give you the 
     code for Python 3.6 and above and click "Copy"
