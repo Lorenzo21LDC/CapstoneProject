@@ -23,6 +23,8 @@ class User(UserMixin, Document):
     email = EmailField()
     image = FileField()
     role = StringField()
+    gradelevel= StringField()
+    academy = StringField()
     
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -61,6 +63,18 @@ class Comment(Document):
     # This could be used to allow comments on comments
     # comment = ReferenceField('Comment',reverse_delete_rule=CASCADE)
     content = StringField()
+    createdate = DateTimeField(default=dt.datetime.utcnow)
+    modifydate = DateTimeField()
+
+    meta = {
+        'ordering': ['-createdate']
+    }
+    
+class Blog(Document):
+    title = StringField()
+    author = ReferenceField('User',reverse_delete_rule=CASCADE) 
+    blurb = StringField()
+    tag = StringField()
     createdate = DateTimeField(default=dt.datetime.utcnow)
     modifydate = DateTimeField()
 

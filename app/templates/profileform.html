@@ -21,6 +21,22 @@
             {% endfor %}
         </p>
         <p>
+            {{ form.academy.label }}<br>
+            {{ form.academy(size=64) }}<br>
+            {% for error in form.academy.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            
+        <p>
+                {{ form.gradelevel.label }}<br>
+                {{ form.gradelevel(size=64) }}<br>
+                {% for error in form.gradelevel.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
                 {{ form.role.label }}<br>
                 {{ form.role() }}<br>
                 {% for error in form.role.errors %}

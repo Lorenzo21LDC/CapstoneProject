@@ -54,11 +54,14 @@ class ResetPasswordForm(FlaskForm):
 
 class ProfileForm(FlaskForm):
     fname = StringField('First Name', validators=[DataRequired()])
-    lname = StringField('Last Name', validators=[DataRequired()]) 
+    lname = StringField('Last Name and middle name', validators=[DataRequired()]) 
     image = FileField("Image") 
     submit = SubmitField('Post')
     role = SelectField('Role',choices=[("Teacher","Teacher"),("Student","Student")])
-
+    gradelevel = StringField('Gradelevel', validators=[DataRequired()])
+    academy = StringField('Academy', validators=[DataRequired()])
+    
+    
 class PostForm(FlaskForm):
     subject = StringField('Subject', validators=[DataRequired()])
     content = TextAreaField('Post', validators=[DataRequired()])
